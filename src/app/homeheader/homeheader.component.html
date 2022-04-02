@@ -1,0 +1,16 @@
+
+<section class="vh-100 d-flex align-items-end">
+  <div class="over"></div>
+  <div class="container position-relative">
+    <h1 class="text-capitalize latest">Our Latest Movies</h1>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of dynamicSlides">
+        <ng-template carouselSlide [id]="slide.id" >
+          <img class="w-100" [src]="prefix+slide.poster_path" [alt]="slide.title" [title]="slide.title">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+    
+
+</section>

@@ -1,0 +1,54 @@
+<div class="custom mt-5 w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="w-100" [src]="prefix+Details?.poster_path">
+            </div>
+            <div class="col-md-8">
+                <h3 class="text-capitalzie">{{Details?.title}}</h3>
+                <p class="subtitle">{{Details?.tagline}}</p>
+                <span class="badge bg-info mx-1 p-2" *ngFor="let g of gensers">
+                    {{g?.name}}
+                </span>
+                <div class="mt-4">
+                    <p>Vote Count : <span>{{Details?.vote_count}}</span></p>
+                    <p>popularity  : <span>{{Details?.popularity}}</span></p>
+                    <p>release_date  : <span>{{Details?.release_date | date:'mediumDate'}}</span></p>
+        
+                    <p class="subtitle">{{Details.overview}}</p>
+                </div>
+                
+            </div>
+        
+
+    </div>
+    </div>
+    
+</div>
+<!--
+<div class="container">
+    <div class="row">
+        
+            <div class="col-md-4">
+                <img class="w-75" [src]="prefix+Details?.poster_path">
+            </div>
+            <div class="col-md-8">
+                <h3 class="text-capitalzie">{{Details?.title}}</h3>
+                <p class="subtitle">{{Details?.tagline}}</p>
+                <span class="badge bg-info mx-1 p-2" *ngFor="let g of gensers">
+                    {{g?.name}}
+                </span>
+                <div class="mt-4">
+                    <p>Vote Count : <span>{{Details?.vote_count}}</span></p>
+                    <p>popularity  : <span>{{Details?.popularity}}</span></p>
+                    <p>release_date  : <span>{{Details?.release_date | date:'mediumDate'}}</span></p>
+        
+                    <p class="subtitle">{{Details.overview}}</p>
+                </div>
+                
+            </div>
+        
+
+    </div>
+</div>
+-->

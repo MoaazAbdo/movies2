@@ -1,0 +1,75 @@
+<app-homeheader [dynamicSlides]="movies"></app-homeheader>
+
+<div class="container">
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center">
+            <div>
+                <div class="bdr w-25"></div>
+                <div class="mt-3 mb-3" >
+                    <h2 class="text-capitalize">Trending movies to watch right now</h2>
+                    <p>Most watched movies by days</p>
+                </div>
+                <div class="bdr w-75"></div>
+            </div>
+        </div>
+
+        <div class="col-md-2" *ngFor="let movie of movies" [style.display]="movie.title == null ? 'none': 'block'">
+            <div class="position-relative">
+                <a [routerLink]="['/movieDetails', movie.id]">
+                    <img class="w-100" [src]="prefix+movie.poster_path" alt="{{movie.title}}" />
+                    <h3 class="h6 mt-3 mb-3">{{movie.original_title}}</h3>
+                    <div class="vote d-flex align-items-center">
+                        <p>{{movie.vote_average}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center">
+            <div>
+                <div class="bdr w-25"></div>
+                <div class="mt-3 mb-3" >
+                    <h2 class="text-capitalize">Trending tvs to watch right now</h2>
+                    <p>Most watched tvs by days</p>
+                </div>
+                <div class="bdr w-75"></div>
+            </div>
+        </div>
+
+        <div class="col-md-2" *ngFor="let tv of trendingTvs" >
+            <div class="position-relative">
+                <img class="w-100" [src]="prefix+tv.poster_path" alt="{{tv.name}}" />
+                <h3 class="h6 mt-3 mb-3">{{tv.name}}</h3>
+                <div class="vote d-flex align-items-center">
+                    <p>{{tv.vote_average}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center">
+            <div>
+                <div class="bdr w-25"></div>
+                <div class="mt-3 mb-3" >
+                    <h2 class="text-capitalize">Trending people to watch right now</h2>
+                    <p>Most watched people by days</p>
+                </div>
+                <div class="bdr w-75"></div>
+            </div>
+        </div>
+        
+        <div class="col-md-2" *ngFor="let person of persons" >
+            <div class="position-relative">
+                <img class="w-100" [src]="prefix+person.profile_path" alt="{{person.name}}" />
+                <h3 class="h6 mt-3 mb-3">{{person.name}}</h3>
+                <div class="vote d-flex align-items-center">
+                    <p>{{person.popularity}}</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>

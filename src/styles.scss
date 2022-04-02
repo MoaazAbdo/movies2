@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Open+Sans:wght@300;400&display=swap');
+
+/*@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+*/
+$bgColor: #131722;
+$lightBgColor:#24baef;
+$bgTransparent: rgba(36, 186, 239,0.6);
+$fontColor: #fff;
+$borderColor: #a8a8a83d;
+$borderHeight: 1px;
+$secondFontColor: #949cb0;
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: $bgColor;
+    color: $fontColor;
+}
+a {
+    font-size: 18px;
+    text-decoration: none;
+    color: $fontColor;
+}
+a:hover {
+    text-decoration: none;
+    color: $secondFontColor;
+    cursor: pointer;
+}
+.navbar-brand .logo {
+    letter-spacing: 5px;
+    font-weight: 900;
+    margin-top: 12px;   
+}
+.bdr {
+    height: 1px;
+    background-color: $borderColor;
+}
+.vote {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $lightBgColor;
+    color: #fff;
+    padding: 5px 7px;
+    font-weight: 700;
+
+}
+.latest {
+    font-weight: 900;
+}
+.subtitle {
+    color: $secondFontColor;
+}
+.custom {
+    position: absolute;
+    top: 10%;
+}
